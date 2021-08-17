@@ -48,3 +48,4 @@
     changed_when: false
     tags:
       - molecule-idempotence-notest
+    when: not vault_stat_result.stat.exists
