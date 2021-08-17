@@ -10,7 +10,7 @@ export PATH=/root/bin:$PATH
 KUBECONFIG=~/.kube/config
 
 echo "Validatin network yaml"
-ajv validate -s blockchain-automation-framework/platforms/network-schema.json -d blockchain-automation-framework/build/network.yaml
+ajv validate -s platforms/network-schema.json -d build/network.yaml
 
 echo "Running the playbook..."
-exec ~/Library/Python/3.8/bin/ansible-playbook -vv blockchain-automation-framework/platforms/shared/configuration/site.yaml --inventory-file=blockchain-automation-framework/platforms/shared/inventory/ -e "@blockchain-automation-framework/build/network.yaml" -e 'ansible_python_interpreter=/usr/bin/python3'
+exec ~/Library/Python/3.8/bin/ansible-playbook -vv platforms/shared/configuration/site.yaml --inventory-file=platforms/shared/inventory/ -e "@build/network.yaml" -e 'ansible_python_interpreter=/usr/bin/python3'
