@@ -29,7 +29,7 @@
 # This task checks if the vault-ro policy already exists
 - name: Check if policy exists
   shell: |
-    i/Users/isna/Documents/Stibo/Blockchain/project/bin/vault policy read vault-crypto-{{ component_type }}-{{ component_name }}-ro
+    /Users/isna/Documents/Stibo/Blockchain/project/bin/vault policy read vault-crypto-{{ component_type }}-{{ component_name }}-ro
   environment:
     VAULT_ADDR: "{{ vault.url }}"
     VAULT_TOKEN: "{{ vault.root_token }}"
