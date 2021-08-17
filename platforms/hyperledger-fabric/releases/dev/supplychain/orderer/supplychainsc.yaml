@@ -1,9 +1,13 @@
-kind: StorageClass
 apiVersion: storage.k8s.io/v1
+kind: StorageClass
 metadata:
   name: supplychainsc
-provisioner: k8s.io/local-path-storage
+provisioner: kubernetes.io/storageos
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
 parameters:
-  encrypted: "true"
+  pool: default
+  description: Kubernetes volume
+  fsType: ext4
+  adminSecretNamespace: default
+  adminSecretName: storageos-secret
