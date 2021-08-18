@@ -4,7 +4,7 @@ set -e
 echo "Starting build process..."
 
 echo "Adding env variables..."
-export PATH=/root/bin:$PATH
+export PATH=/Users/isna/Documents/Stibo/Blockchain/project/bin:/root/bin:$PATH
 
 #Path to k8s config file
 KUBECONFIG=~/.kube/config
