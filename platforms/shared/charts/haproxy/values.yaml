@@ -8,10 +8,10 @@ metadata:
 image:
   defaultbackend: gcr.io/google_containers/defaultbackend:1.0
   haproxy: quay.io/jcmoraisjr/haproxy-ingress
-  version: v0.9.1
+  version: v0.13.1
 
 service:
   type: LoadBalancer
-  ports: 
+  ports:
     http: 80
     https: 8443
